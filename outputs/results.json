@@ -1,0 +1,131 @@
+{
+ "data": {
+  "raw_records": 2952223,
+  "missing_district": 1,
+  "invalid_district": 2632,
+  "dropped_reporting_lag": 8210,
+  "kept_records": 2941380,
+  "api_total_since_2015": 2952223,
+  "api_missing_district": 1,
+  "end": "2026-10-12",
+  "daily_rows": 94682,
+  "weekly_beat_rows": 167008,
+  "downloaded_rows": 297348
+ },
+ "overall": [
+  {
+   "index": "seasonal_naive",
+   "MAE": 7.314,
+   "RMSE": 9.448,
+   "WAPE_%": 23.176,
+   "time_s": 0.013
+  },
+  {
+   "index": "mean_4_weekdays",
+   "MAE": 5.682,
+   "RMSE": 7.368,
+   "WAPE_%": 18.004,
+   "time_s": 0.012
+  },
+  {
+   "index": "holt_winters",
+   "MAE": 5.308,
+   "RMSE": 6.86,
+   "WAPE_%": 16.818,
+   "time_s": 211.042
+  },
+  {
+   "index": "lightgbm",
+   "MAE": 5.197,
+   "RMSE": 6.677,
+   "WAPE_%": 16.467,
+   "time_s": 32.729
+  }
+ ],
+ "bootstrap": {
+  "mae_improvement": 2.117,
+  "ci95": [
+   1.896,
+   2.382
+  ],
+  "pct_improvement": 28.9,
+  "pct_ci95": [
+   26.6,
+   31.5
+  ],
+  "share_resamples_gt0": 1.0
+ },
+ "drift_by_year": [
+  {
+   "yr": 2020,
+   "MAE_retrained": 5.9,
+   "MAE_frozen": 6.3,
+   "bias_retrained": 0.56,
+   "bias_frozen": 2.0,
+   "mean_y": 27.2,
+   "frozen_penalty_%": 6.73
+  },
+  {
+   "yr": 2021,
+   "MAE_retrained": 4.95,
+   "MAE_frozen": 5.29,
+   "bias_retrained": 0.54,
+   "bias_frozen": 2.27,
+   "mean_y": 26.28,
+   "frozen_penalty_%": 6.8
+  },
+  {
+   "yr": 2022,
+   "MAE_retrained": 5.26,
+   "MAE_frozen": 5.51,
+   "bias_retrained": -0.07,
+   "bias_frozen": 1.01,
+   "mean_y": 29.51,
+   "frozen_penalty_%": 4.78
+  },
+  {
+   "yr": 2023,
+   "MAE_retrained": 5.34,
+   "MAE_frozen": 5.5,
+   "bias_retrained": -0.35,
+   "bias_frozen": 0.01,
+   "mean_y": 32.48,
+   "frozen_penalty_%": 2.86
+  },
+  {
+   "yr": 2024,
+   "MAE_retrained": 5.14,
+   "MAE_frozen": 5.32,
+   "bias_retrained": -0.28,
+   "bias_frozen": 0.11,
+   "mean_y": 32.38,
+   "frozen_penalty_%": 3.67
+  },
+  {
+   "yr": 2025,
+   "MAE_retrained": 5.11,
+   "MAE_frozen": 5.41,
+   "bias_retrained": 0.81,
+   "bias_frozen": 1.74,
+   "mean_y": 29.6,
+   "frozen_penalty_%": 5.82
+  }
+ ],
+ "psi": {
+  "y": 0.116,
+  "lag7": 0.114,
+  "lag364": 0.089,
+  "rmean28": 0.195,
+  "rstd28": 0.088
+ },
+ "hotspots": {
+  "weeks": 156,
+  "beats": 272,
+  "p@20_lightgbm": 0.575,
+  "p@20_last_week": 0.467,
+  "weeks_lgb_better": 131,
+  "weeks_tied": 18,
+  "time_s": 61.2
+ },
+ "runtime_s": 566
+}
